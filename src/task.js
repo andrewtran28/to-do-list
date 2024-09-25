@@ -1,4 +1,4 @@
-console.log("This is project.js!");
+console.log("This is task.js!");
 
 //Project module
 class Task {
@@ -19,6 +19,8 @@ class Task {
 }
 
 class TodoList {
+    static defaultProjectID = 0;
+
     constructor() {
         this.projects = [];
     }
@@ -64,6 +66,15 @@ class TodoList {
             let task = project.getTask(taskID);
             if (task) {
                 project.deleteTask(taskID);
+            }
+        }
+    }
+
+    checkTask(taskID) {
+        for (project of this.projects) {
+            let task = project.getTask(taskID);
+            if (task) {
+                task.checkTask();
             }
         }
     }

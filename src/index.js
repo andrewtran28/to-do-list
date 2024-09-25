@@ -1,10 +1,6 @@
 console.log("This is index.js!");
 
-// function createToDo (title, description, due, priority, note, check) {
-//     const newToDo = New ToDo (title, description, due, priority, note, check);
-//     return { newToDo };
-// }
-
+import { Task } from "./task.js";
 
 //Project module
 const manageProject = () => {
