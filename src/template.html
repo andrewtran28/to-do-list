@@ -7,6 +7,48 @@
     </head>
 
     <body>
-        
+        <div class="header-cont">
+            <h1>My To-Do List</h1>
+
+            <button id="add-project">+ Add Project</button>
+            <button id="add-to-do">+ Add Task</button>
+
+            <div class="footer"><em>To-Do List App</em> by minglee (2024)</div>
+        </div>
+
+        <dialog class="dialog-project">
+            <button autofocus class="close">x</button>
+            <form method="dialog">
+                <legend>Add New Project</legend>
+                <br>
+                <label for="project-name">Project Name</label>
+                <input type="text" id="project-name" required/>
+                <button id="submit">Add Project</button>
+            </form>
+        </dialog>
+
+        <dialog class="dialog-task">
+            <button autofocus class="close">x</button>
+            <form method="dialog">
+                <legend>Add New Task</legend>
+                <br>
+                <label for="task-title">Task Title</label>
+                <input type="text" id="task-title" required/>
+                <br>
+                <label for="task-desc">Description</label>
+                <input type="text" id="task-desc"/>
+                <br>
+                <label for="task-due">Due Date</label>
+                <input type="date" id="task-due"/>
+                <br>
+                <label for="task-priority">Priority</label>
+                <select id="task-priority">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                  </select>
+                <button id="submit">Add Task</button>
+            </form>
+        </dialog>
     </body>
 </html>
